@@ -51,7 +51,7 @@ export async function fetchSupplierB(city: string): Promise<SupplierResult> {
     return { supplier: 'Supplier B', hotels, healthy: true };
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err);
-    logger.error('Supplier B fetch failed', { error: message });
+    logger.error('Supplier B fetch failed ', { error: message });
     return { supplier: 'Supplier B', hotels: [], healthy: false, errorMessage: message };
   }
 }
